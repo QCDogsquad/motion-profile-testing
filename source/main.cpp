@@ -11,6 +11,8 @@ const f64 MaxVelocity     = 1;
 #include "integration.cpp"
 #include "motion_profile.cpp"
 
+#include "testing.cpp"
+
 //~ Main
 
 int main() {
@@ -44,8 +46,6 @@ int main() {
  
  integration_context Context = MakeIntegrationContext(0.0001, t7, MaxAcceleration, MaxVelocity);
  
- // TODO(Tyler): It would likely be better to use something like RK4 
- // instead of basic Euler integration
  while(IntegrationDoContinue(&Context)){
   f64 JerkForStep = 0.0;
   if(Context.CurrentTime <= t0){
@@ -81,10 +81,10 @@ int main() {
  
  
  //~ Test everything:
- TestMotionProfile1DPosition( 123);
- TestMotionProfile1DPosition(-456);
- TestMotionProfile1DVelocity( 123);
- TestMotionProfile1DVelocity(-456);
+ TestPositionMotionProfile1D( 123);
+ TestPositionMotionProfile1D(-456);
+ TestVelocityMotionProfile1D( 123);
+ TestVelocityMotionProfile1D(-456);
  
  
  
