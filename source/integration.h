@@ -4,9 +4,18 @@
 #define INTEGRATION_H
 
 struct integration_context {
- f64 Position     = 0.0;
- f64 Velocity     = 0.0;
- f64 Acceleration = 0.0;
+ union {
+  f64 Position     = 0.0;
+  v2  PositionV2;
+ };
+ union {
+  f64 Velocity     = 0.0;
+  v2  VelocityV2;
+ };
+ union {
+  f64 Acceleration = 0.0;
+  v2  AccelerationV2;
+ };
  
  f64 TheoreticalMaxAcceleration = 0.0f;
  f64 TheoreticalMaxVelocity = 0.0f;
