@@ -9,11 +9,6 @@ set LIBRARIES= User32.lib Gdi32.lib Opengl32.lib Comdlg32.lib
 
 pushd "build"
 
-REM goto SnailJumpyPng
-
-REM rm *.pdb
-REM /PDB:"SnailJumpy%time:~3,2%%time:~6,2%.pdb"
-
 :SnailJumpy
-cl %COMPILE_OPTIONS% %INCLUDE_PATHS% /Fe:Robotics_Testing.exe ..\source\main.cpp /link  %LINK_OPTIONS% %LIBRARY_PATHS% %LIBRARIES%
+cl %COMPILE_OPTIONS% %INCLUDE_PATHS% /Fe:Motion_Profile_Testing.exe ..\source\main.cpp /link  %LINK_OPTIONS% %LIBRARY_PATHS% %LIBRARIES%
 popd

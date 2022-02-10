@@ -1,22 +1,22 @@
 version(1);
 
-project_name = "Snail Jumpy";
+project_name = "Motion Profile";
 
 patterns = {
-"*.cpp",
-"*.h",
-"*.c",
-"*.vert",
-"*.frag",
-"*.glsl",
-"*.bat",
-"*.4coder",
-"*.txt",
-"*.sja"
+    "*.cpp",
+    "*.h",
+    "*.c",
+    "*.vert",
+    "*.frag",
+    "*.glsl",
+    "*.bat",
+    "*.4coder",
+    "*.txt",
+    "*.sja"
 };
 
 load_paths = {
-{ {
-		{".", .relative = true, .recursive = true},
-	}, .os = "win"},
+    { {
+            {".", .relative = true, .recursive = true},
+        }, .os = "win"},
 };
